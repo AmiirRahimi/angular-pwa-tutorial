@@ -1,0 +1,44 @@
+<div class="container">
+  <header>
+    <h1>{{ title() }}</h1>
+    <p>به اپلیکیشن PWA با Angular خوش آمدید! 🎉</p>
+  </header>
+
+  <main>
+    <!-- Online/Offline Status -->
+    <div class="status-container">
+      <div class="status-indicator" [class.online]="isOnline()" [class.offline]="!isOnline()">
+        <span class="status-icon">{{ isOnline() ? '🟢' : '🔴' }}</span>
+        <span class="status-text">
+          {{ isOnline() ? 'آنلاین هستید' : 'آفلاین هستید - در حالت آفلاین هم کار میکند!' }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Install Button -->
+    @if (canInstall()) {
+      <div class="install-container">
+        <button class="install-btn" (click)="installPWA()">
+          📱 نصب اپلیکیشن (Add to Home Screen)
+        </button>
+        <p class="install-hint">برای تجربه بهتر، اپلیکیشن را روی دستگاه خود نصب کنید</p>
+      </div>
+    }
+
+    <!-- Content -->
+    <div class="content">
+      <div class="welcome-card">
+        <h2>اپلیکیشن PWA با Angular</h2>
+        <p>این اپلیکیشن یک مثال ساده از Progressive Web App با استفاده از Angular است.</p>
+        <ul>
+          <li>✅ قابلیت کار در حالت آفلاین</li>
+          <li>✅ قابلیت نصب روی دستگاه</li>
+          <li>✅ رابط کاربری ساده و کاربرپسند</li>
+          <li>✅ استفاده از Service Worker برای کش کردن</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  </div>
+
+<router-outlet />

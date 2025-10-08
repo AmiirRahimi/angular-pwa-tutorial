@@ -1,0 +1,184 @@
+/* Global Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e1e5e9;
+}
+
+header h1 {
+  color: #1976d2;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+header p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Status Indicator */
+.status-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.status-indicator.online {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.status-indicator.offline {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #f44336;
+  animation: pulse 2s infinite;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+.status-text {
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Install Container */
+.install-container {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.install-btn {
+  background: #ffffff;
+  color: #667eea;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.install-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.install-hint {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Content */
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e1e5e9;
+  max-width: 600px;
+  width: 100%;
+}
+
+.welcome-card h2 {
+  color: #1976d2;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.welcome-card p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.welcome-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.welcome-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.welcome-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-card {
+    padding: 20px;
+  }
+
+  .status-indicator {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .install-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
